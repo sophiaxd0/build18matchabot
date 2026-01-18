@@ -10,7 +10,8 @@
 // Define whisk stepper motor connections and steps per revolution:
 #define WdirPin 5
 #define WstepPin 2
-#define WstepsPerQuarterRevolution 70
+#define WstepsdownPerQuarterRevolution 70
+#define WstepsupPerQuarterRevolution 75
 
 void setup() {
   // Declare pins as output:
@@ -18,11 +19,9 @@ void setup() {
   pinMode(LSdirPin, OUTPUT);
   pinMode(WstepPin, OUTPUT);
   pinMode(WdirPin, OUTPUT);
-}
 
-void loop() {
-  // Set the spinning direction clockwise:
-  digitalWrite(LSdirPin, HIGH);
+    // Set the spinning direction clockwise:
+  digitalWrite(LSdirPin, LOW);
 
   delay(1250); //matcha dispensing step
   // move from matcha dispensing to water dispensing
@@ -47,7 +46,7 @@ void loop() {
   digitalWrite(WdirPin, LOW);
 
   //move whisk down
-  for (int i = 0; i < WstepsPerQuarterRevolution; i++) {
+  for (int i = 0; i < WstepsdownPerQuarterRevolution; i++) {
     digitalWrite(WstepPin, HIGH);
     delayMicroseconds(15000);
     digitalWrite(WstepPin, LOW);
@@ -58,7 +57,7 @@ void loop() {
   delay(15000); //whisking time
 
   //move whisk back up
-  for (int i = 0; i < WstepsPerQuarterRevolution; i++) {
+  for (int i = 0; i < WstepsupPerQuarterRevolution; i++) {
     
     digitalWrite(WstepPin, HIGH);
     delayMicroseconds(15000);
@@ -77,5 +76,17 @@ void loop() {
     delayMicroseconds(15000);
   }
   delay(15000); //milk dispensing time
-  
+
+  //move back to the beginning
+  for (int i = 0; i < LSstepsPerQuarterRevolution; i++) {
+    
+    digitalWrite(LSstepPin, HIGH);
+    delayMicroseconds(15000);
+    digitalWrite(LSstepPin, LOW);
+    delayMicroseconds(15000);
+  }
+  delay(500); //milk dispensing time
+}
+
+void loop() {
 }
