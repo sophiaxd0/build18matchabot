@@ -30,30 +30,30 @@ Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 // Text messages
 const char* messages[] = {
-  "My favorite song is Bags by Clairo.",
-  "Do you like my selvedge denim from Japan?",
-  "Peep my new Snoopy tote bag.",
-  "End period cramps!",
-  "I'm an empath.",
-  "Hell yeah, girlbossss!",
-  "Lowkey so real.",
   "\"If the feminine issue is so absurd, is because the male's arrogance made it 'a discussion'\" - de Beauvoir, The Second Sex",
+  "\"If one man can destroy everything, why can't one girl change it?\" - Malala Yousafzai",
+  "My favorite song is Bags by Clairo.",
+  "\"Since day one, she's already had everything she needs within herself. It's the world that convinced her she did not.\" - Rupi Kaur",
+  "Do you like my selvedge denim from Japan?",
+  "\"A woman with a voice is, by definition, a strong woman.\" - Melinda Gates",
+  "Peep my new Snoopy tote bag.",
+  "\"There is no limit to what we, as women, can accomplish.\" - Michelle Obama",
+  "End period cramps!",
+  "The best revenge is massive success.",
+  "I'm an empath.",
   "\"The feminine body is expected to be flesh, but discreetly so\" - de Beauvoir, The Second Sex",
   "\"One is not born, but rather becomes a woman.\" - de Beauvoir, The Second Sex",
-  "\"Likewise, the most mediocre of males believes himself a demigod next to women\" - de B
-Filter your search...
-Type:
-
-All
-Topic:
-
-All
-
-
-
-
-eauvoir, The Second Sex",
-  "\"I am Kenough.\" - Ken, Barbie movie"
+  "Hell yeah, girlbossss!",
+  "Lowkey so real.",
+  "\"Likewise, the most mediocre of males believes himself a demigod next to women\" - de Beauvoir, The Second Sex",
+  "\"I am Kenough.\" - Ken, Barbie movie",
+  "\"There is no force more powerful than a woman determined to rise.",
+  "\"If they don't give you a seat at the table, bring a folding chair.\"",
+  "\"Well-behaved women rarely make history.\"",
+  "\"Feet, what do I need you for when I have wings to fly?\"",
+  "Today is a new day.",
+  
+  
 };
 
 const int numMessages = sizeof(messages) / sizeof(messages[0]);
