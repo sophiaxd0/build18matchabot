@@ -4,39 +4,39 @@
    More info: https://www.makerguides.com */
 
 // Define stepper motor connections and steps per revolution:
-#define dirPin 5
-#define stepPin 2
-#define stepsPerQuarterRevolution 70
+#define WdirPin 5
+#define WstepPin 2
+#define WstepsPerQuarterRevolution 70
 
 void setup() {
   // Declare pins as output:
-  pinMode(stepPin, OUTPUT);
-  pinMode(dirPin, OUTPUT);
+  pinMode(WstepPin, OUTPUT);
+  pinMode(WdirPin, OUTPUT);
 }
 
 void loop() {
   // Set the spinning direction clockwise:
-  digitalWrite(dirPin, LOW);
+  digitalWrite(WdirPin, LOW);
 
   // Spin the stepper motor 1 revolution slowly:
-  for (int i = 0; i < stepsPerQuarterRevolution; i++) {
+  for (int i = 0; i < WstepsPerQuarterRevolution; i++) {
     // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
+    digitalWrite(WstepPin, HIGH);
     delayMicroseconds(15000);
-    digitalWrite(stepPin, LOW);
+    digitalWrite(WstepPin, LOW);
     delayMicroseconds(15000);
   }
 
   delay(500);
-  digitalWrite(dirPin, HIGH);
+  digitalWrite(WdirPin, HIGH);
   delay(500);
 
   // Spin the stepper motor 1 revolution slowly:
-  for (int i = 0; i < stepsPerQuarterRevolution; i++) {
+  for (int i = 0; i < WstepsPerQuarterRevolution; i++) {
     // These four lines result in 1 step:
-    digitalWrite(stepPin, HIGH);
+    digitalWrite(WstepPin, HIGH);
     delayMicroseconds(15000);
-    digitalWrite(stepPin, LOW);
+    digitalWrite(WstepPin, LOW);
     delayMicroseconds(15000);
   }
   delay(5000);
