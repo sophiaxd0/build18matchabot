@@ -40,7 +40,19 @@ const char* messages[] = {
   "\"If the feminine issue is so absurd, is because the male's arrogance made it 'a discussion'\" - de Beauvoir, The Second Sex",
   "\"The feminine body is expected to be flesh, but discreetly so\" - de Beauvoir, The Second Sex",
   "\"One is not born, but rather becomes a woman.\" - de Beauvoir, The Second Sex",
-  "\"Likewise, the most mediocre of males believes himself a demigod next to women\" - de Beauvoir, The Second Sex",
+  "\"Likewise, the most mediocre of males believes himself a demigod next to women\" - de B
+Filter your search...
+Type:
+
+All
+Topic:
+
+All
+
+
+
+
+eauvoir, The Second Sex",
   "\"I am Kenough.\" - Ken, Barbie movie"
 };
 
