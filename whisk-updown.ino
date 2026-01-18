@@ -1,26 +1,22 @@
-#include <Wire.h> 
+/* Example sketch to control a stepper motor with 
+   A4988/DRV8825 stepper motor driver and 
+   Arduino without a library. 
+   More info: https://www.makerguides.com */
+
 // Define stepper motor connections and steps per revolution:
 #define dirPin 5
 #define stepPin 2
-#define stepsPerQuarterRevolution 50
-
-int x = 0;
+#define stepsPerQuarterRevolution 70
 
 void setup() {
-  Wire.begin(); 
+  // Declare pins as output:
   pinMode(stepPin, OUTPUT);
-  pinMode(dirPin, OUTPUT); 
+  pinMode(dirPin, OUTPUT);
 }
 
 void loop() {
-  //send start signal 
-  x = 1; 
-  Wire.beginTransmission(9); // transmit to device #9
-  Wire.write(x);              // sends x 
-  Wire.endTransmission();    // stop transmitting 
-
-   // Set the spinning direction clockwise:
-  digitalWrite(dirPin, HIGH);
+  // Set the spinning direction clockwise:
+  digitalWrite(dirPin, LOW);
 
   // Spin the stepper motor 1 revolution slowly:
   for (int i = 0; i < stepsPerQuarterRevolution; i++) {
@@ -30,9 +26,10 @@ void loop() {
     digitalWrite(stepPin, LOW);
     delayMicroseconds(15000);
   }
-  
+
   delay(500);
-  digitalWrite(dirPin, LOW); //move whisk down
+  digitalWrite(dirPin, HIGH);
+  delay(500);
 
   // Spin the stepper motor 1 revolution slowly:
   for (int i = 0; i < stepsPerQuarterRevolution; i++) {
@@ -42,7 +39,5 @@ void loop() {
     digitalWrite(stepPin, LOW);
     delayMicroseconds(15000);
   }
-
-  delay(5000); 
-
+  delay(5000);
 }
