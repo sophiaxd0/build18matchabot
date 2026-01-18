@@ -40,20 +40,28 @@ const char* messages[] = {
   "\"There is no limit to what we, as women, can accomplish.\" - Michelle Obama",
   "End period cramps!",
   "The best revenge is massive success.",
+  "All roads lead to AI cheating startups.",
+  "Be the best version of yourself.",
   "I'm an empath.",
   "\"The feminine body is expected to be flesh, but discreetly so\" - de Beauvoir, The Second Sex",
   "\"One is not born, but rather becomes a woman.\" - de Beauvoir, The Second Sex",
   "Hell yeah, girlbossss!",
+  "We can talk about the lazy Susan in front of it!",
   "Lowkey so real.",
   "\"Likewise, the most mediocre of males believes himself a demigod next to women\" - de Beauvoir, The Second Sex",
   "\"I am Kenough.\" - Ken, Barbie movie",
-  "\"There is no force more powerful than a woman determined to rise.",
+  "\"There is no force more powerful than a woman determined to rise.\"",
   "\"If they don't give you a seat at the table, bring a folding chair.\"",
   "\"Well-behaved women rarely make history.\"",
   "\"Feet, what do I need you for when I have wings to fly?\"",
+  "He stroked the gears to get them going...",
   "Today is a new day.",
-  
-  
+  "You're the MILKBOT",
+  "Be the change you wish to see in the world.",
+  "Women have it so hard.",
+  "I love strong independent women.",
+  "6'2 btw"
+
 };
 
 const int numMessages = sizeof(messages) / sizeof(messages[0]);
